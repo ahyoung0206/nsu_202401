@@ -3,6 +3,7 @@ package homework1;
 import java.util.Scanner;
 
 public class areaDemo {
+
         public static void main(String[] args) {
             double w, h, area;
             Scanner in = new Scanner(System.in);
@@ -21,6 +22,7 @@ package homework1;
 import java.util.Scanner;
 
 public class sniffleDemo {
+
     public static void main(String[] args) {
         int num;
         String result;
