@@ -101,6 +101,7 @@ package homework1;
 import java.util.Scanner;
 
 public class problem7 {
+
     public static void main(String[] args) {
         int x;
         Scanner in = new Scanner(System.in);
@@ -120,6 +121,7 @@ package homework1;
 import java.util.Scanner;
 
 public class problem8 {
+
     public static void main(String[] args) {
         int n;
         Scanner in = new Scanner(System.in);
@@ -134,6 +136,7 @@ package homework1;
 import java.util.Scanner;
 
 public class problem9 {
+
     public static void main(String[] args) {
         int n1, n2, n3;
         Scanner in = new Scanner(System.in);
