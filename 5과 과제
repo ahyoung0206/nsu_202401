@@ -1,0 +1,268 @@
+package Challenges;
+
+import java.util.Scanner;
+
+public class problem1 {
+    public static void main(String[] args) {
+        int numOfStudents = 0;
+        int[] scores;
+        Scanner in = new Scanner(System.in);
+        System.out.print("학생 수? ");
+        numOfStudents = in.nextInt();
+        scores = new int[numOfStudents];
+
+        System.out.println(numOfStudents + "명의 학생 성적을 입력하세요.");
+        for (int i = 0; i < numOfStudents; i++)
+            scores[i] = in.nextInt();
+
+        System.out.println(numOfStudents + "명의 학생 성적은 다음과 같습니다.");
+        for (int i = 0; i < numOfStudents; i++)
+            System.out.print(scores[i] + " ");
+    }
+}
+
+
+package Challenges;
+
+import java.util.Scanner;
+
+public class problem2 {
+    public static void main(String[] args) {
+        int numOfStudents = 0;
+        int[] scores;
+        Scanner in = new Scanner(System.in);
+        System.out.print("학생 수? ");
+        numOfStudents = in.nextInt();
+        scores = new int[numOfStudents];
+
+        System.out.println(numOfStudents + "명의 학생 성적을 입력하세요.");
+        for (int i = 0; i < numOfStudents; i++)
+            scores[i] = in.nextInt();
+
+        System.out.println(numOfStudents + "명의 학생 성적은 다음과 같습니다.");
+        for (int score: scores)
+            System.out.print(score + " ");;
+        System.out.println();
+
+        for (int i = 0; i < numOfStudents; i++) {
+            if (scores[i] >= 90)
+                System.out.println((i + 1) + "번 학생의 등급은 A입니다.");
+            else if (scores[i] >= 80 && scores[i] < 90)
+                System.out.println((i + 1) + "번 학생의 등급은 B입니다.");
+            else if (scores[i] >= 70 && scores[i] < 80)
+                System.out.println((i + 1) + "번 학생의 등급은 C입니다.");
+            else if (scores[i] >= 60 && scores[i] < 70)
+                System.out.println((i + 1) + "번 학생의 등급은 D입니다.");
+            else
+                System.out.println((i + 1) + "번 학생의 등급은 F입니다.");
+        }
+    }
+}
+
+
+
+package Challenges;
+
+import java.util.Scanner;
+
+public class problem3 {
+    public static void main(String[] args) {
+        int numOfStudents = 0;
+        int[] scores;
+        Scanner in = new Scanner(System.in);
+        System.out.print("학생 수? ");
+        numOfStudents = in.nextInt();
+        scores = new int[numOfStudents];
+
+        System.out.println(numOfStudents + "명의 학생 성적을 입력하세요.");
+        for (int i = 0; i < numOfStudents; i++)
+            scores[i] = in.nextInt();
+
+        System.out.println(numOfStudents + "명의 학생 성적은 다음과 같습니다.");
+        for (int score: scores)
+            System.out.print(score + " ");;
+        System.out.println();
+
+        for (int i = 0; i < numOfStudents; i++) {
+            if (scores[i] >= 90)
+                System.out.println((i + 1) + "번 학생의 등급은 " + Grade.최우수 + "입니다.");
+            else if (scores[i] >= 80 && scores[i] < 90)
+                System.out.println((i + 1) + "번 학생의 등급은 " + Grade.우수 + "입니다.");
+            else if (scores[i] >= 70 && scores[i] < 80)
+                System.out.println((i + 1) + "번 학생의 등급은 " + Grade.보통 + "입니다.");
+            else if (scores[i] >= 60 && scores[i] < 70)
+                System.out.println((i + 1) + "번 학생의 등급은 " + Grade.미흡 + "입니다.");
+            else
+                System.out.println((i + 1) + "번 학생의 등급은 " + Grade.탈락 + "입니다.");
+        }
+    }
+}
+
+enum Grade {
+    최우수, 우수, 보통, 미흡, 탈락;
+}
+
+
+
+package Programming;
+
+import java.util.Scanner;
+
+public class problem1 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("문자열을 입력하시오: ");
+        String s = in.nextLine();
+        System.out.print("찾을 문자를 입력하시오: ");
+        char c = in.next().charAt(0);
+
+        System.out.println(countChar(s, c));
+
+    }
+
+    static int countChar(String s, char c){
+        int n = 0;
+        for (int i = 0; i < s.length(); i++)
+        {
+            if (s.charAt(i) == c)
+                n++;
+        }
+        return n;
+    }
+}
+
+
+
+package Programming;
+
+public class problem2 {
+    public static void main(String[] args) {
+        System.out.println(sumExceptFirst(1, 2, 3, 4));
+        int arr[] = {2, 3};
+        System.out.println(sumExceptFirst(1, arr));
+        System.out.println(sumExceptFirst(1, 2, 3, 4, 5));
+    }
+    public static int sumExceptFirst(int i, int... nums) {
+        int sum = 0;
+        for (int j : nums) {
+            sum += j;
+        }
+        return sum;
+    }
+}
+
+
+
+
+package Programming;
+
+public class problem3 {
+    public static void main(String[] args) {
+        for (Direction d : Direction.values())
+            System.out.print(d + " ");
+    }
+}
+
+enum Direction {
+    동, 서, 남, 북;
+}
+
+
+
+package Programming;
+
+import java.util.Scanner;
+
+public class problem4 {
+    public static void main(String[] args) {
+        String s;
+        Scanner in = new Scanner(System.in);
+        String a = "com";
+        String b ="java";
+        String c = "bye";
+
+        do{
+            System.out.print("URL을 입력하세요: ");
+            s = in.next();
+
+            if (s.endsWith(a)){
+                System.out.println(s + "은 'com'으로 끝납니다.");
+            }
+            if (s.contains(b)){
+                System.out.println(s + "은 'java'를 포함합니다.");
+            }
+        } while (!s.equals(c));
+    }
+}
+
+
+
+package Programming;
+
+import java.util.Scanner;
+
+public class problem5 {
+    public static void main(String[] args) {
+        int [] nums = new int[10];
+        int [] hist = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        Scanner in = new Scanner(System.in);
+        System.out.println("숫자를 10개 입력하세요. ");
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = in.nextInt();
+        }
+        for (int j = 0; j < 10; j++) {
+            if (nums[j] >= 0 && nums[j] <= 9)
+                hist[0]++;
+            else if (nums[j] >= 10 && nums[j] <= 19)
+                hist[1]++;
+            else if (nums[j] >= 20 && nums[j] <= 29)
+                hist[2]++;
+            else if (nums[j] >= 30 && nums[j] <= 39)
+                hist[3]++;
+            else if (nums[j] >= 40 && nums[j] <= 49)
+                hist[4]++;
+            else if (nums[j] >= 50 && nums[j] <= 59)
+                hist[5]++;
+            else if (nums[j] >= 60 && nums[j] <= 69)
+                hist[6]++;
+            else if (nums[j] >= 70 && nums[j] <= 79)
+                hist[7]++;
+            else if (nums[j] >= 80 && nums[j] <= 89)
+                hist[8]++;
+            else if (nums[j] >= 90 && nums[j] <= 99)
+                hist[9]++;
+        }
+        for (int k = 0; k < 10; k++) {
+            System.out.print((k * 10) + " ~ " + (k * 10 + 9) + " : ");
+            for (int l = 0; l < hist[k]; l++)
+                System.out.print("*");
+            System.out.println();
+        }
+    }
+}
+
+
+
+package Programming;
+
+import java.util.Scanner;
+
+public class problem6 {
+    public static void main(String[] args) {
+        System.out.print("배열을 입력하세요: ");
+        Scanner in = new Scanner(System.in);
+        int[] n = new int[5];
+        for (int i = 0; i < n.length; i++) {
+            n[i] = in.nextInt();
+        }
+        reverse(n);
+    }
+
+    public static int[] reverse(int[] org){
+        for (int i = 5; i >0; i--){
+            System.out.print(org[i- 1] + " ");
+        }
+        return org;
+    }
+}
+
